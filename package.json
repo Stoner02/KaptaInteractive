@@ -2,9 +2,12 @@
   "name": "kaptaback",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "start": "nodemon index.js",
+    "start": "SET NODE_ENV=development&& nodemon bin/www",
+    "start:prod": "NODE_ENV=production nodemon bin/www",
+    "winstart": "SET NODE_ENV=development&& nodemon bin/www",
+    "winstart:prod": "SET NODE_ENV=production&& nodemon bin/www",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -22,6 +25,7 @@
   "homepage": "https://github.com/Stoner02/KaptaInteractive-back#readme",
   "dependencies": {
     "@hapi/hapi": "^20.2.1",
-    "nodemon": "^2.0.15"
+    "nodemon": "^2.0.15",
+    "socket.io": "^4.4.0"
   }
 }

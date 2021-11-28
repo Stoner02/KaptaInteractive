@@ -1,0 +1,35 @@
+// const http = require("http");
+// const https = require("https");
+// const fs = require("fs");
+const { app } = require("../app");
+const env = require("../env")[process.env.NODE_ENV];
+const { initSocketServer } = require("../config/socket.config");
+
+const server = require('http').Server(app).listen(env.portHTTP);
+
+// http
+//   .createServer((req, res) => {
+//     res.writeHead(301, {
+//       Location: `https://${req.headers.host.split(":")[0]}:${env.portHTTPS}${
+//         req.url
+//       }`,
+//     });
+//     res.end();
+//   })
+//   .listen(env.portHTTP);
+
+// const server = https
+//   .createServer(
+//     {
+//       key: fs.readFileSync(env.keyUrl),
+//       cert: fs.readFileSync(env.certUrl),
+//     },
+//     app
+//   )
+//   .listen(env.portHTTPS);
+
+initSocketServer(server);
+
+module.exports = {
+  server,
+};
