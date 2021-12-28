@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+html(lang="fr")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title QCMLive
+    link(
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous")
+    link(rel="stylesheet" href="/css/style.css")
+    script(src="/socket.io/socket.io.js")
+    script(src="/javascripts/socket.js")
+    script(src="/javascripts/createRoom.js")
+  body(class="d-flex flex-column")
+    div(class="container-fluid flex-fill d-flex mb-2")
+      label Password : 
+      input(class="password-input  ml-2" type="text")
+    div(class="container-fluid flex-fill d-flex mb-2")
+      label Name :
+      input(class="name-input  ml-2" type="text")
+    button(class="create-button") creer

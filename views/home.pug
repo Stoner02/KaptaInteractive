@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+html(lang="fr")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title QCMLive
+    link(rel="stylesheet" href="/css/style.css")
+    script(src="/socket.io/socket.io.js")
+    script(src="/javascripts/socket.js")
+    script(src="/javascripts/homeRoom.js")
+  body(class="d-flex flex-column")
+    h2 SALON
+    h2(class="room-identifier") Room Identifier : #{roomId}
+    div(class="container-fluid flex-fill d-flex flex-column")
+      lu(class="players-list")
+    div(class="container-fluid flex-fill d-flex mb-2")
+      button(class="leave-button p-2") Leave
+    div(class="container-fluid flex-fill d-flex mb-2")
+      button(class="ready-button p-2") Ready

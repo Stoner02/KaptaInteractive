@@ -1,11 +1,11 @@
-const joinRoom = ({ roomId, socket }) => {
-      socket.join(`/${roomId}`);
-      console.log("Room :" +roomId+" joined.");
+const joinRoom = ({ data, socket }) => {
+      socket.join(`/${data.roomId}`);
+      console.log(`${data.pseudo} joined the room ${data.roomId}`);
   };
 
-const leaveRoom = ({ roomId, socket }) => {
-  socket.leave(`/${roomId}`);
-  console.log("Room : "+roomId+" leaved");
+const leaveRoom = ({ data, socket }) => {
+  socket.leave(`/${data.roomId}`);
+  console.log(`${data.pseudo} leaved the room ${data.roomId}`);
 };
 
 module.exports = {
